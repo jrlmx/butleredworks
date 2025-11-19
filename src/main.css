@@ -1,0 +1,140 @@
+@import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/normalize.dark.min.css";
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    @view-transition {
+        navigation: auto;
+    }
+}
+
+.header {
+    background-color: #333736;
+    background-repeat: no-repeat;
+}
+
+.hero {
+    display: grid;
+    min-height: 80vh;
+    place-content: center;
+    align-content: center;
+    padding: var(--size-6);
+    background-image: url("/hero_bg.webp");
+}
+
+.nav-wrapper {
+    position: sticky;
+    inset-block-start: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: var(--shadow-3);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    a {
+        color: rgba(255, 255, 255, 1);
+        text-decoration: none;
+        padding: var(--size-4);
+        transition: color;
+        display: inline-flex;
+        justify-content: center;
+    }
+    a:hover,
+    a:focus {
+        color: rgba(255, 255, 255, 0.8);
+    }
+}
+
+.nav-toggle {
+    display: none;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    padding: var(--size-4);
+}
+
+.icon {
+    max-width: var(--size-5);
+    max-height: var(--size-5);
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background: black;
+        width: 100%;
+        top: 100%;
+        &.show {
+            display: flex;
+        }
+        a {
+            width: 100%;
+        }
+        a:hover,
+        a:focus {
+            color: rgba(255, 255, 255, 0.8);
+        }
+    }
+
+    .nav-toggle {
+        display: inline-flex;
+    }
+}
+
+.brand {
+    color: rgba(255, 255, 255);
+    margin-inline: var(--size-6);
+    max-width: var(--size-6);
+    max-height: var(--size-6);
+    &:hover {
+        color: rgba(255, 255, 255, 0.8);
+    }
+}
+
+.content {
+    display: grid;
+    gap: var(--size-6);
+}
+
+.content > section:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.content section .container {
+    min-height: 80vh;
+    padding: var(--size-6);
+    align-content: center;
+}
+
+.prose {
+    max-width: 65ch;
+    p {
+        margin-top: var(--size-6);
+    }
+}
+
+.footer {
+    background-color: black;
+    padding: var(--size-6);
+}
+
+.copyright {
+    text-align: center;
+}
+
+.container {
+    margin-inline: auto;
+    max-width: var(--size-lg);
+}
