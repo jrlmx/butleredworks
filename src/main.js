@@ -18,4 +18,4 @@ async function setupVideos() {
     console.log(res)
 }
 
-// await setupVideos()
+await setupVideos()
