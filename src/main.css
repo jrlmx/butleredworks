@@ -20,9 +20,9 @@
     display: grid;
     min-height: 80vh;
     place-content: center;
-    align-content: center;
     padding: var(--size-6);
     background-image: url("/hero_bg.webp");
+    background-position: center;
 }
 
 .nav-wrapper {
@@ -80,7 +80,7 @@
             display: flex;
         }
         a {
-            width: 100%;
+            display: block;
         }
         a:hover,
         a:focus {
@@ -103,12 +103,8 @@
     }
 }
 
-.content {
-    display: grid;
-    gap: var(--size-6);
-}
-
 .content > section {
+    margin-bottom: var(--size-6);
     h2 {
         margin-bottom: var(--size-6);
     }
@@ -126,16 +122,17 @@
 
 .channel-cards {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
     gap: var(--size-6);
     h3 {
         font-size: var(--size-4);
     }
     .channel-card {
-        border-radius: var(--radius-2);
         padding: var(--size-fluid-3);
         box-shadow: var(--shadow-2);
         background-color: var(--gray-12);
+        border: var(--gray-9) var(--border-size-2) solid;
+        border-radius: var(--radius-drawn-3);
     }
 }
 
