@@ -6,6 +6,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <title>ButleredWorks</title>
+        <link
+            rel="preload"
+            as="image"
+            href="hero_bg_w_2560.webp"
+            imagesrcset="
+                hero_bg_w_200.webp 200w,
+                hero_bg_w_614.webp 614w,
+                hero_bg_w_869.webp 869w,
+                hero_bg_w_1092.webp 1092w,
+                hero_bg_w_1214.webp 1214w,
+                hero_bg_w_1362.webp 1362w,
+                hero_bg_w_1400.webp 1400w,
+                hero_bg_w_2560.webp 2560w
+            "
+            imagesizes="(max-width: 2560px) 100vw, 2560px"
+        />
         <link rel="stylesheet" href="/src/main.css" />
         <script type="module" src="/src/main.js" defer></script>
     </head>
@@ -62,6 +78,22 @@
         </div>
 
         <header class="header">
+            <img
+                class="hero-bg"
+                sizes="(max-width: 2560px) 100vw, 2560px"
+                srcset="
+                    hero_bg_w_200.webp   200w,
+                    hero_bg_w_614.webp   614w,
+                    hero_bg_w_869.webp   869w,
+                    hero_bg_w_1092.webp 1092w,
+                    hero_bg_w_1214.webp 1214w,
+                    hero_bg_w_1362.webp 1362w,
+                    hero_bg_w_1400.webp 1400w,
+                    hero_bg_w_2560.webp 2560w
+                "
+                src="hero_bg_w_2560.webp"
+                alt="hero image"
+            />
             <div class="hero">
                 <h1>Butlered Works</h1>
             </div>
