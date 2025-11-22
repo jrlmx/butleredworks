@@ -1,5 +1,8 @@
 import Alpine from "alpinejs"
+import intersect from "@alpinejs/intersect"
 import { db } from "./lib/database"
+
+Alpine.plugin(intersect)
 
 window.Alpine = Alpine
 

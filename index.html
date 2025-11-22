@@ -2,10 +2,14 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <meta property="og:title" content="Butlered Works" />
+        <!-- <meta property="og:description" content="A description" />
+        <meta property="og:image" content="https://www.yoursite.com/images/social-share.jpg" />
+        <meta property="og:url" content="https://www.yoursite.com" /> -->
+        <meta property="og:type" content="website" />
         <title>ButleredWorks</title>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link
             rel="preload"
             as="image"
@@ -28,7 +32,7 @@
     </head>
     <body>
         <header class="site-header">
-            <nav class="site-nav container" x-data="{ isOpen: false }" @click.away="isOpen = false">
+            <nav class="site-nav" x-data="{ isOpen: false }" @click.away="isOpen = false">
                 <a href="/" aria-label="Go to Homepage">
                     <svg
                         class="site-nav__brand"
@@ -178,7 +182,7 @@
 
         <footer class="site-footer">
             <div class="container">
-                <div class="site-footer__copyright">&copy; Butlered Works 2025</div>
+                <div class="site-footer__copyright">&copy; Grant Butler 2025</div>
             </div>
         </footer>
     </body>
