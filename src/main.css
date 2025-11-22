@@ -135,11 +135,17 @@
         font-size: var(--size-4);
     }
     .channel-card {
-        padding: var(--size-fluid-3);
         box-shadow: var(--shadow-2);
         background-color: var(--gray-12);
-        border: var(--gray-9) var(--border-size-2) solid;
-        border-radius: var(--radius-drawn-3);
+    }
+    .channel-card > img {
+        padding: 0;
+        margin: 0;
+        display: block;
+        border: none;
+    }
+    .channel-card > div {
+        padding: var(--size-6);
     }
 }
 
